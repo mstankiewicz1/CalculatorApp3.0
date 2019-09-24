@@ -22566,13 +22566,27 @@ var App = function (_React$Component) {
         }, _this.buttonPressed = function (name) {
             if (name === '=') {
                 _this.operationResult();
+            } else if (name === 'C') {
+                _this.clear();
+            } else if (name === 'CE') {
+                _this.backspace();
             } else {
                 _this.setState({
                     result: _this.state.result + name
                 });
             }
         }, _this.operationResult = function () {
-            console.log('Tu bedzie wynik');
+            _this.setState({
+                result: eval(_this.state.result)
+            });
+        }, _this.clear = function () {
+            _this.setState({
+                result: ''
+            });
+        }, _this.backspace = function () {
+            _this.setState({
+                result: _this.state.result.slice(0, -1)
+            });
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -22702,6 +22716,16 @@ var Buttons = function (_React$Component) {
                     'button',
                     { name: '=', onClick: this.clickButton },
                     '='
+                ),
+                _react2.default.createElement(
+                    'button',
+                    { name: 'C', onClick: this.clickButton },
+                    'C'
+                ),
+                _react2.default.createElement(
+                    'button',
+                    { name: 'CE', onClick: this.clickButton },
+                    'CE'
                 )
             );
         }

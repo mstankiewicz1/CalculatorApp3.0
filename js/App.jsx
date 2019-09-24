@@ -9,8 +9,12 @@ class App extends React.Component {
     };
 
     buttonPressed = (name) => {
-      if (name === '='){
+      if (name === '=') {
           this.operationResult();
+      }else if (name === 'C') {
+          this.clear();
+      }else if (name === 'CE'){
+          this.backspace();
       }else {
           this.setState({
               result: this.state.result + name,
@@ -19,11 +23,22 @@ class App extends React.Component {
     };
 
     operationResult = () => {
-        console.log('Tu bedzie wynik');
+        this.setState({
+            result: eval(this.state.result)
+        })
     };
 
+    clear = () => {
+        this.setState({
+            result: ''
+        })
+    };
 
-
+    backspace = () => {
+        this.setState({
+            result: this.state.result.slice(0,-1)
+        })
+    };
 
 
     render() {
