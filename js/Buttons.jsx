@@ -20,6 +20,8 @@ class Buttons extends React.Component {
                 <button name='9' onClick={this.clickButton}>9</button>
                 <button name='+' onClick={this.clickButton}>+</button>
                 <button name='-' onClick={this.clickButton}>-</button>
+                <button name='/' onClick={this.clickButton}>/</button>
+                <button name='*' onClick={this.clickButton}>*</button>
                 <button name='=' onClick={this.clickButton}>=</button>
                 <button name='C' onClick={this.clickButton}>C</button>
                 <button name='CE' onClick={this.clickButton}>CE</button>
