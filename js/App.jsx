@@ -23,9 +23,13 @@ class App extends React.Component {
     };
 
     operationResult = () => {
-        this.setState({
+        try{this.setState({
             result: eval(this.state.result)
-        })
+        })} catch(e) {
+            this.setState({
+                result: 'error'
+            })
+        }
     };
 
     clear = () => {
@@ -43,9 +47,11 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
-                <Result result={this.state.result}/>
-                <Buttons singleButtonPressed={this.buttonPressed}/>
+            <div className="app">
+                <div className="buttonsAndResult">
+                    <Result result={this.state.result}/>
+                    <Buttons singleButtonPressed={this.buttonPressed}/>
+                </div>
             </div>
         )
     }

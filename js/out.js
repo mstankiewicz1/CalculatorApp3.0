@@ -22576,9 +22576,15 @@ var App = function (_React$Component) {
                 });
             }
         }, _this.operationResult = function () {
-            _this.setState({
-                result: eval(_this.state.result)
-            });
+            try {
+                _this.setState({
+                    result: eval(_this.state.result)
+                });
+            } catch (e) {
+                _this.setState({
+                    result: 'error'
+                });
+            }
         }, _this.clear = function () {
             _this.setState({
                 result: ''
@@ -22595,9 +22601,13 @@ var App = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
-                _react2.default.createElement(_Result2.default, { result: this.state.result }),
-                _react2.default.createElement(_Buttons2.default, { singleButtonPressed: this.buttonPressed })
+                { className: 'app' },
+                _react2.default.createElement(
+                    'div',
+                    { className: 'buttonsAndResult' },
+                    _react2.default.createElement(_Result2.default, { result: this.state.result }),
+                    _react2.default.createElement(_Buttons2.default, { singleButtonPressed: this.buttonPressed })
+                )
             );
         }
     }]);
@@ -22656,86 +22666,106 @@ var Buttons = function (_React$Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                null,
+                { className: 'buttons' },
                 _react2.default.createElement(
                     'button',
-                    { name: '1', onClick: this.clickButton },
+                    { name: '1', onClick: this.clickButton, className: 'singleButton' },
                     '1'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '2', onClick: this.clickButton },
+                    { name: '2', onClick: this.clickButton, className: 'singleButton' },
                     '2'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '3', onClick: this.clickButton },
+                    { name: '3', onClick: this.clickButton, className: 'singleButton' },
                     '3'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '4', onClick: this.clickButton },
+                    { name: '4', onClick: this.clickButton, className: 'singleButton' },
                     '4'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '5', onClick: this.clickButton },
+                    { name: '5', onClick: this.clickButton, className: 'singleButton' },
                     '5'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '6', onClick: this.clickButton },
+                    { name: '6', onClick: this.clickButton, className: 'singleButton' },
                     '6'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '7', onClick: this.clickButton },
+                    { name: '7', onClick: this.clickButton, className: 'singleButton' },
                     '7'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '8', onClick: this.clickButton },
+                    { name: '8', onClick: this.clickButton, className: 'singleButton' },
                     '8'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '9', onClick: this.clickButton },
+                    { name: '9', onClick: this.clickButton, className: 'singleButton' },
                     '9'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '+', onClick: this.clickButton },
+                    { name: '0', onClick: this.clickButton, className: 'singleButton' },
+                    '0'
+                ),
+                _react2.default.createElement(
+                    'button',
+                    { name: '+', onClick: this.clickButton, className: 'singleButton' },
                     '+'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '-', onClick: this.clickButton },
+                    { name: '-', onClick: this.clickButton, className: 'singleButton' },
                     '-'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '/', onClick: this.clickButton },
+                    { name: '/', onClick: this.clickButton, className: 'singleButton' },
                     '/'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '*', onClick: this.clickButton },
+                    { name: '*', onClick: this.clickButton, className: 'singleButton' },
                     '*'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '=', onClick: this.clickButton },
+                    { name: '.', onClick: this.clickButton, className: 'singleButton' },
+                    '.'
+                ),
+                _react2.default.createElement(
+                    'button',
+                    { name: '=', onClick: this.clickButton, className: 'singleButton' },
                     '='
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: 'C', onClick: this.clickButton },
+                    { name: 'C', onClick: this.clickButton, className: 'singleButton' },
                     'C'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: 'CE', onClick: this.clickButton },
+                    { name: 'CE', onClick: this.clickButton, className: 'singleButton' },
                     'CE'
+                ),
+                _react2.default.createElement(
+                    'button',
+                    { name: '(', onClick: this.clickButton, className: 'singleButton' },
+                    '('
+                ),
+                _react2.default.createElement(
+                    'button',
+                    { name: ')', onClick: this.clickButton, className: 'singleButton' },
+                    ')'
                 )
             );
         }
@@ -22781,13 +22811,13 @@ var Result = function (_React$Component) {
     }
 
     _createClass(Result, [{
-        key: 'render',
+        key: "render",
         value: function render() {
             return _react2.default.createElement(
-                'div',
-                null,
+                "div",
+                { className: "result" },
                 _react2.default.createElement(
-                    'h1',
+                    "p",
                     null,
                     this.props.result
                 )
