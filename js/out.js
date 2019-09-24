@@ -22563,8 +22563,16 @@ var App = function (_React$Component) {
 
         return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = App.__proto__ || Object.getPrototypeOf(App)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
             result: ''
-        }, _this.buttonPressed = function () {
-            console.log("działa 123");
+        }, _this.buttonPressed = function (name) {
+            if (name === '=') {
+                _this.operationResult();
+            } else {
+                _this.setState({
+                    result: _this.state.result + name
+                });
+            }
+        }, _this.operationResult = function () {
+            console.log('Tu bedzie wynik');
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -22624,8 +22632,8 @@ var Buttons = function (_React$Component) {
             args[_key] = arguments[_key];
         }
 
-        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Buttons.__proto__ || Object.getPrototypeOf(Buttons)).call.apply(_ref, [this].concat(args))), _this), _this.clickButton = function () {
-            _this.props.singleButtonPressed();
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Buttons.__proto__ || Object.getPrototypeOf(Buttons)).call.apply(_ref, [this].concat(args))), _this), _this.clickButton = function (e) {
+            _this.props.singleButtonPressed(e.target.name);
         }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
@@ -22642,57 +22650,57 @@ var Buttons = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'button',
-                    null,
+                    { name: '2', onClick: this.clickButton },
                     '2'
                 ),
                 _react2.default.createElement(
                     'button',
-                    null,
+                    { name: '3', onClick: this.clickButton },
                     '3'
                 ),
                 _react2.default.createElement(
                     'button',
-                    null,
+                    { name: '4', onClick: this.clickButton },
                     '4'
                 ),
                 _react2.default.createElement(
                     'button',
-                    null,
+                    { name: '5', onClick: this.clickButton },
                     '5'
                 ),
                 _react2.default.createElement(
                     'button',
-                    null,
+                    { name: '6', onClick: this.clickButton },
                     '6'
                 ),
                 _react2.default.createElement(
                     'button',
-                    null,
+                    { name: '7', onClick: this.clickButton },
                     '7'
                 ),
                 _react2.default.createElement(
                     'button',
-                    null,
+                    { name: '8', onClick: this.clickButton },
                     '8'
                 ),
                 _react2.default.createElement(
                     'button',
-                    null,
+                    { name: '9', onClick: this.clickButton },
                     '9'
                 ),
                 _react2.default.createElement(
                     'button',
-                    null,
+                    { name: '+', onClick: this.clickButton },
                     '+'
                 ),
                 _react2.default.createElement(
                     'button',
-                    null,
+                    { name: '-', onClick: this.clickButton },
                     '-'
                 ),
                 _react2.default.createElement(
                     'button',
-                    null,
+                    { name: '=', onClick: this.clickButton },
                     '='
                 )
             );

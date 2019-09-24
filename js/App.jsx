@@ -8,9 +8,21 @@ class App extends React.Component {
       result: ''
     };
 
-    buttonPressed = () => {
-      console.log("działa 123")
+    buttonPressed = (name) => {
+      if (name === '='){
+          this.operationResult();
+      }else {
+          this.setState({
+              result: this.state.result + name,
+          })
+        }
     };
+
+    operationResult = () => {
+        console.log('Tu bedzie wynik');
+    };
+
+
 
 
 
