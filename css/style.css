@@ -8,17 +8,17 @@
 }
 
 .buttonsAndResult {
-    height: 100%;
     background-color: green;
     margin: 0 auto;
 }
 
 .result {
-    height: 250px;
+    height: 20vh;
     background-color: orange;
 }
 
 .buttons {
+    height: 80vh;
     background-color: crimson;
     margin: 0 auto;
 }
