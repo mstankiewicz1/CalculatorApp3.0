@@ -1,5 +1,6 @@
 import React from 'react';
-
+import Buttons from './Buttons.jsx';
+import Result from './Result.jsx';
 
 class App extends React.Component {
 
@@ -7,7 +8,8 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <h1>Działa kalkulator 3.0</h1>
+                <Result/>
+                <Buttons/>
             </div>
         )
     }
