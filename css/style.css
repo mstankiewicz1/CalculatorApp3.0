@@ -5,21 +5,30 @@
 .app {
     text-align: center;
     background-color: red;
-    height: 100vh;
 }
 
 .buttonsAndResult {
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
     background-color: green;
-
+    margin: 0 auto;
 }
 
 .result {
-    width: 100vw;
+    height: 250px;
+    background-color: orange;
 }
 
 .buttons {
+    background-color: crimson;
+    margin: 0 auto;
+}
+
+.singleButton {
+    width: 25%;
+    height: 20%;
+    font-size: 50px;
+
+
 
 }
 
