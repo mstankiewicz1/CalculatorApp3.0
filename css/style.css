@@ -4,7 +4,6 @@
 
 .app {
     text-align: center;
-    background-color: red;
 }
 
 .buttonsAndResult {
@@ -14,7 +13,8 @@
 
 .result {
     height: 20vh;
-    background-color: orange;
+    background-color: white;
+    border: .1px solid grey;
 }
 
 .buttons {
@@ -26,9 +26,14 @@
 .singleButton {
     width: 25%;
     height: 20%;
-    font-size: 40px;
+    font-size: 35px;
     background-color: white;
-    border: .2px solid grey;
+    border: .1px solid grey;
+}
+
+ button:hover {
+     color: white;
+     background: -webkit-linear-gradient(top, #11610d, #0bdf00);
 }
 
 .singleButton:nth-child(1),  .singleButton:nth-child(2), .singleButton:nth-child(3), .singleButton:nth-child(4),
@@ -37,8 +42,13 @@
     background-color: #f0f0f0;
 }
 
+ .singleButton:nth-child(1):hover,  .singleButton:nth-child(2):hover, .singleButton:nth-child(3):hover, .singleButton:nth-child(4):hover,
+ .singleButton:nth-child(8):hover, .singleButton:nth-child(12):hover,.singleButton:nth-child(16):hover {
+     color: white;
+ }
+
 .singleButton:last-child {
-    background-color: green;
+    background-color: #2b961f;
     color: white;
 }
 
