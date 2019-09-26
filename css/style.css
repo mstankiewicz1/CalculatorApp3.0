@@ -26,10 +26,20 @@
 .singleButton {
     width: 25%;
     height: 20%;
-    font-size: 50px;
+    font-size: 40px;
+    background-color: white;
+    border: .2px solid grey;
+}
 
+.singleButton:nth-child(1),  .singleButton:nth-child(2), .singleButton:nth-child(3), .singleButton:nth-child(4),
+.singleButton:nth-child(8), .singleButton:nth-child(12),.singleButton:nth-child(16){
+    color: #4682B4;
+    background-color: #f0f0f0;
+}
 
-
+.singleButton:last-child {
+    background-color: green;
+    color: white;
 }
 
 

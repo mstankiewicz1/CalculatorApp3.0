@@ -22669,6 +22669,26 @@ var Buttons = function (_React$Component) {
                 { className: 'buttons' },
                 _react2.default.createElement(
                     'button',
+                    { name: '(', onClick: this.clickButton, className: 'singleButton' },
+                    '('
+                ),
+                _react2.default.createElement(
+                    'button',
+                    { name: 'C', onClick: this.clickButton, className: 'singleButton' },
+                    'C'
+                ),
+                _react2.default.createElement(
+                    'button',
+                    { name: 'CE', onClick: this.clickButton, className: 'singleButton' },
+                    'CE'
+                ),
+                _react2.default.createElement(
+                    'button',
+                    { name: ')', onClick: this.clickButton, className: 'singleButton' },
+                    ')'
+                ),
+                _react2.default.createElement(
+                    'button',
                     { name: '1', onClick: this.clickButton, className: 'singleButton' },
                     '1'
                 ),
@@ -22681,6 +22701,11 @@ var Buttons = function (_React$Component) {
                     'button',
                     { name: '3', onClick: this.clickButton, className: 'singleButton' },
                     '3'
+                ),
+                _react2.default.createElement(
+                    'button',
+                    { name: '/', onClick: this.clickButton, className: 'singleButton' },
+                    '/'
                 ),
                 _react2.default.createElement(
                     'button',
@@ -22699,6 +22724,11 @@ var Buttons = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'button',
+                    { name: '*', onClick: this.clickButton, className: 'singleButton' },
+                    '*'
+                ),
+                _react2.default.createElement(
+                    'button',
                     { name: '7', onClick: this.clickButton, className: 'singleButton' },
                     '7'
                 ),
@@ -22714,28 +22744,13 @@ var Buttons = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '0', onClick: this.clickButton, className: 'singleButton' },
-                    '0'
-                ),
-                _react2.default.createElement(
-                    'button',
                     { name: '+', onClick: this.clickButton, className: 'singleButton' },
                     '+'
                 ),
                 _react2.default.createElement(
                     'button',
-                    { name: '-', onClick: this.clickButton, className: 'singleButton' },
-                    '-'
-                ),
-                _react2.default.createElement(
-                    'button',
-                    { name: '/', onClick: this.clickButton, className: 'singleButton' },
-                    '/'
-                ),
-                _react2.default.createElement(
-                    'button',
-                    { name: '*', onClick: this.clickButton, className: 'singleButton' },
-                    '*'
+                    { name: '0', onClick: this.clickButton, className: 'singleButton' },
+                    '0'
                 ),
                 _react2.default.createElement(
                     'button',
@@ -22744,28 +22759,13 @@ var Buttons = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                     'button',
+                    { name: '-', onClick: this.clickButton, className: 'singleButton' },
+                    '-'
+                ),
+                _react2.default.createElement(
+                    'button',
                     { name: '=', onClick: this.clickButton, className: 'singleButton' },
                     '='
-                ),
-                _react2.default.createElement(
-                    'button',
-                    { name: 'C', onClick: this.clickButton, className: 'singleButton' },
-                    'C'
-                ),
-                _react2.default.createElement(
-                    'button',
-                    { name: 'CE', onClick: this.clickButton, className: 'singleButton' },
-                    'CE'
-                ),
-                _react2.default.createElement(
-                    'button',
-                    { name: '(', onClick: this.clickButton, className: 'singleButton' },
-                    '('
-                ),
-                _react2.default.createElement(
-                    'button',
-                    { name: ')', onClick: this.clickButton, className: 'singleButton' },
-                    ')'
                 )
             );
         }
