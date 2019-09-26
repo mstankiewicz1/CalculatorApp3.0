@@ -28,27 +28,29 @@
     height: 20%;
     font-size: 35px;
     background-color: white;
-    border: .1px solid grey;
 }
 
  button:hover {
      color: white;
      background: -webkit-linear-gradient(top, #11610d, #0bdf00);
+     transition-duration:  1s;
 }
 
 .singleButton:nth-child(1),  .singleButton:nth-child(2), .singleButton:nth-child(3), .singleButton:nth-child(4),
 .singleButton:nth-child(8), .singleButton:nth-child(12),.singleButton:nth-child(16){
     color: #4682B4;
     background-color: #f0f0f0;
+    transition-duration:  1s;
 }
 
  .singleButton:nth-child(1):hover,  .singleButton:nth-child(2):hover, .singleButton:nth-child(3):hover, .singleButton:nth-child(4):hover,
  .singleButton:nth-child(8):hover, .singleButton:nth-child(12):hover,.singleButton:nth-child(16):hover {
      color: white;
+     transition-duration:  1s;
  }
 
 .singleButton:last-child {
-    background-color: #2b961f;
+    background-color: #4682B4;
     color: white;
 }
 
