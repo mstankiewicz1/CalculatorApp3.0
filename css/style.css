@@ -30,7 +30,7 @@
     background-color: white;
 }
 
- button:hover {
+ button:hover, .singleButton:last-child:hover {
      color: white;
      background: -webkit-linear-gradient(top, #11610d, #0bdf00);
 }
@@ -47,7 +47,7 @@
  }
 
 .singleButton:last-child {
-    background-color: #4682B4;
+    background-image: linear-gradient(to bottom, #05295c, #00357f, #0a3fa2, #2649c6, #4451e9);
     color: white;
 }
 
